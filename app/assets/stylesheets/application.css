@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+
+
+.header {
+    text-align: center;
+    background-color: rgb(0,200,255);
+    font-size: 50px;
+    font-family: sans-serif;
+    margin-bottom: 40px;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.buttons {
+    text-align: right;
+}
+
+button{
+    margin: 5px 5px;
+}
+
+input {
+    margin: 10px 0px 10px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: white;
+    background-color: #009933;
+    
+}
+
+.footer {
+    background-color: #6666ff;
+    text-align: center;
+    margin-top: 4in;
+}
+
+/*body {
+    background-image: url(https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwj5pdSrp5TVAhVn_4MKHZWBCZ0QjRwIBw&url=http%3A%2F%2Fwallpaperpulse.com%2Fbackground-1080&psig=AFQjCNHJwF_9sLzy6X-oh71Hjm-DvOFuNg&ust=1500517998262953);
+    
+}*/
