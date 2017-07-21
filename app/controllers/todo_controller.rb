@@ -1,5 +1,6 @@
 class TodoController < ApplicationController
     def index
+        @todos = Todo.all
     end
 
     def show
@@ -7,6 +8,14 @@ class TodoController < ApplicationController
     end
     def edit
         @todo=Todo.find_by_id(params[:id])
+    end
+    
+    def create
+        t = Todo.new
+        t.description = params['description']
+        t.pomodoro_estimate = params['pomodoro-estimate']
+        t.save
+        redirect_to "/todo/show/#{ t.id }"
     end
     
     def update
@@ -17,7 +26,10 @@ class TodoController < ApplicationController
         redirect_to "/todo/show/#{t.id}"
     end
     
-
-    def delete
+    def destroy
+        t = Todo.find_by_id(params[:id])
+        t.destroy
+        redirect_to "/"
     end
+
 end

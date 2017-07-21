@@ -8,29 +8,18 @@
 </div>
  
  <ul>
+     <% @todos.each do |todo| %>
     <li>
-         <input type="checkbox" > </input>
-        <a href="show.html">eat</a>
+         <input type="checkbox" name=""/>
+         <a href="todo/show/<%= todo.id %>"><%= todo.description %>
+         <span class="pomodoro-estimate small-ponodoro-estimate"><%= todo.pomodoro_estimate %> Pomodoros</span>
+         </a>
+         <!-- extended the </a> to make the black pomodoros clickable -->
     </li>
-    <li>
-        <input type="checkbox"></input>
-            <a href="#">
-                sleep
-            </a>
-    </li>
-    <li>
-        <input type="checkbox"></input>
-            <a href="#">
-                code
-            </a>
-    </li>
+    <% end %>
 </ul>
-         
+
          
 <div id = "new-todo-block">
-    <input id = "new-todo-description" class="text-input" type="text" placeholder="Task"/>
-    <br>
-    <input id = "new-pomodoro-estimate" class="text-input" type="number"/>
-    <br>
-    <input id = "add-new-todo-button" class="button" type="submit"/>
+<a href="/todo/new" class="button add-new-todo-button" id="add-new-todo-button">Add a todo</a>
 </div>

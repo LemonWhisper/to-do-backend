@@ -10,16 +10,16 @@
     
 <div class="buttons">
     <button>
-        <a href="#">Edit</a>
+        <a href="/todo/edit/<%=@todo.id %>" class="button edit-todo-button">Edit</a>
     </button>
 </div>
 <div class="buttons">
     <button>
-        <a href="#">Delete</a>
+        <a href="/todo/destroy/<%= @todo.id %>" class="button delete-todo-button">Delete</a>
     </button>
 </div>
 <div class="buttons">
     <button>
-        <a href="index.html">Go Back</a>
+        <a href="/" class="simple-link">Go Back...</a>
     </button>
 </div>
